@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>我的網站(Pages)</h1>
+    <p>學校名稱: {{ name }}</p>
+    <p>學生姓名: {{ stud.name }}</p>
+    <p>學生年齡: {{ stud.age }}</p>
+    <p>學生性別: {{ stud.gender }}</p>
+    {% if stud.age > 18 %}
+        <p>學生已成年</p>
+    {% else %}
+        <p>學生未成年</p>
+    {% endif %}
+    {% for data in datas %}
+        <p>{{ data }}</p>
+    {% empty %}
+        <p>沒有資料喔</p>
+    {% endfor %}
+</body>
+</html>
